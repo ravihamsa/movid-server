@@ -1,4 +1,9 @@
 movid-server
 ============
 
-movid server
+setup
+
+npm install
+
+
+
