@@ -95,12 +95,16 @@ function groupedFind(key, callback) {
         }
     }
 
+    var limit = {
+        $limit:10
+    }
+
     project.$project[key]=1;
 
 
 
 
-    MyTransaction.aggregate(project, group, function (err, transactions) {
+    MyTransaction.aggregate(project, group,limit, function (err, transactions) {
         if (err) {
             callback(err);
         } else {
